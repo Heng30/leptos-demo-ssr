@@ -1,0 +1,12 @@
+{
+    "name": "leptos-demo-ssr",
+    "version": "0.1.0",
+    "scripts": {
+        "build": "npx tailwindcss -i ./style/tailwind.css -o ./dist/pkg/tailwind.css",
+        "watch": "npx tailwindcss -i ./style/tailwind.css -o ./target/site/pkg/tailwind.css --watch"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "tailwindcss": "^3.3.2"
+    }
+}
