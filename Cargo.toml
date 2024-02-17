@@ -21,9 +21,17 @@ thiserror = "1"
 tracing = { version = "0.1", optional = true }
 http = "1"
 gloo-storage = "0.3"
+anyhow = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+reqwest = "0.11.24"
 
 [features]
-hydrate = ["leptos/hydrate", "leptos_meta/hydrate", "leptos_router/hydrate"]
+hydrate = [
+    "leptos/hydrate",
+    "leptos_meta/hydrate",
+    "leptos_router/hydrate",
+]
+
 ssr = [
     "dep:axum",
     "dep:tokio",

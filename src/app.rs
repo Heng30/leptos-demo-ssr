@@ -4,6 +4,9 @@ use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
 
+use crate::hello::*;
+use crate::form::*;
+
 #[component]
 pub fn App() -> impl IntoView {
     logging::log!("Start...");
@@ -45,7 +48,15 @@ fn HomePage() -> impl IntoView {
     view! {
         <div class="flex m-2 items-center flex-col">
             <h1>"Welcome to Leptos!"</h1>
-            <button class="border-2 text-gray-500" on:click=on_click>"Click Me: " {count}</button>
+            <button class="border-2 text-gray-500" on:click=on_click>
+                "Click Me: "
+                {count}
+            </button>
+        </div>
+
+        <div class="flex items-center mt-4 flex-col">
+            <HelloButton/>
+            <ActionFormButton/>
         </div>
     }
 }
